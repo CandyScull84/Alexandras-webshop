@@ -20,8 +20,11 @@ This project is a simple web-based e-commerce application for a kitchen accessor
 Demo of the project
 
 ### Screenshots
+**ProductPage**
 ![ProductPage](./Images/productpage.png)
+**CartPage**
 ![CartPage](./Images/cartpage.png)
+**OrderSummary**
 ![OrderSummary](./Images/ordersummary.png)
 
 ---
