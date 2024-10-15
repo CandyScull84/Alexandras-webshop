@@ -21,12 +21,15 @@ Demo of the project
 
 ### Screenshots
 *ProductPage*
+
 ![ProductPage](./Images/productpage.png)
 
 *CartPage*
+
 ![CartPage](./Images/cartpage.png)
 
 *OrderSummary*
+
 ![OrderSummary](./Images/ordersummary.png)
 
 ---
