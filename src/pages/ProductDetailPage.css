@@ -29,7 +29,7 @@
 
 /* style för bilder */
 .product-detail-page img {
-  width: 100%;  /* Bilden tar hela bredden av sin container */
+  width: 50%;  /* Bilden tar hela bredden av sin container */
   max-width: 400px; /* Maximal bredd på bilden */
   height: auto;  /* Bildens höjd justeras automatiskt */
   border-radius: 8px;
