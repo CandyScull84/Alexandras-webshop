@@ -1,6 +1,6 @@
-# Welcome to Alexandras-webshop Baking Dream #
+# Welcome to Alexandras-webshop Baking Dreams #
 
-This project is a simple web-based e-commerce application for a kitchen accessories shop, built with React as a schoolproject. Users can view a list of products, see details about individual products, add items to their cart, and proceed with an order. The application is structured with components for easy navigation and a responsive layout. 
+This project is a simple web-based e-commerce application for a kitchenaccessories shop, built with React as a schoolproject. Users may view a list of products, see details about individual products, add items to their cart, and proceed with an order. The application is structured with components for easy navigation and a responsive layout. 
 
 ## Table of Contents
 - [Demo](#demo)
