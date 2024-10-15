@@ -1,0 +1,58 @@
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 19vh; /* Placerad under header */
+  left: -200px; /* Dold till vänster */
+  width: 200px;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.8); /* bakgrund halvtransparent sidomenyn */
+  padding: 20px;
+  transition: right 0.3s ease; /* Smidig öppning/stängning */
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(75, 151, 150, 0.5); /* Lätt skugga för bättre separation */
+}
+
+/* På mindre skärmar kan man öppna sidomenyn*/
+.sidebar.open {
+  left: 0; /* Visas från vänster när den är öppen */
+}
+
+/* Menyn stängs med stängninsknapp */
+.sidebar-close {
+  font-size: 1.5rem; /* Större stängningsikon */
+  cursor: pointer; /* Handpekare för stängningsikon */
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: slategray; /* Grå stängningsikon */
+}
+
+/* MenyLista för sidebar */
+.sidebar ul {
+  list-style-type: none; /* Inte visa som punktlista */
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+.sidebar ul li {
+  margin: 10px 0; 
+}
+
+/* Länkar i sidebar */
+.sidebar ul li a {
+  color: #117373; 
+  text-decoration: none;
+  font-size: 1.125rem;
+  display: block; /* Gör hela länkområdet klickbart */
+  padding: 10px 20px; /* Lite padding för bättre klickbarhet */
+  border-radius: 5px; /* Rundade hörn för länkar */
+  box-shadow: 0 2px 4px rgba(75, 151, 150, 0.2); /* Lätt skugga för bättre separation */
+}
+
+.sidebar ul li a:hover {
+  transform: translateY(-2px); /* Listnamnen rör sig/lyfter när man hovrar över */
+}
+
+.sidebar ul li a:active {
+  background-color: #C0DEDC; /* Kulör bakgrund vid aktiv länk */
+}

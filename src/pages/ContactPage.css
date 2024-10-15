@@ -1,0 +1,52 @@
+/* ContactPage.css */
+
+/* Huvudcontainer för ContactPage */
+.contact-container {
+  display: flex;
+  justify-content: center; /* Centrera innehållet horisontellt */
+  align-items: flex-start; /* Centrera innehållet vertikalt */
+  padding-top: 20px;
+  min-height: 100vh; /* Fyll hela höjden */
+  width: 100%;
+  background-color: #C0DEDC; /* Bakgrundsfärg */
+}
+
+/* Stil för visitkortet */
+.contact-card {
+  background-color: white; /* Vit bakgrund för kortet */
+  border: 2px solid #117373; /* Grön ram */
+  border-radius: 10px; /* Rundade hörn */
+  padding: 20px; /* Inre avstånd */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skugga för djup */
+  max-width: 400px; /* Maxbredd för kortet */
+  text-align: center; /* Centrera textinnehållet */
+}
+
+/* Stil för rubriker och paragrafer */
+.contact-card h2 {
+  margin-bottom: 10px; 
+  font-size: 1.5rem; 
+  color: #117373; 
+}
+
+.contact-card p {
+  margin: 5px 0; /* Avstånd mellan paragrafer */
+  color: slategray; /* Färg på texten */
+  font-size: 1rem; /* Storlek på texten */
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 15px; 
+    max-width: 90%; /* Fyll mer av skärmen på mobiler */
+  }
+
+  .contact-card h2 {
+    font-size: 1.25rem; 
+  }
+
+  .contact-card p {
+    font-size: 0.875rem; 
+  }
+}

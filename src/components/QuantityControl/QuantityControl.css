@@ -1,0 +1,66 @@
+/*QuantityControl*/
+
+/* Kvantitetsknappar (plus/minus) */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrera innehållet */
+  gap: 5px; /* Mellanrum mellan minusknappen, kvantiteten och plusknappen */
+
+}
+
+/* Knappstil för + och - */
+.quantity-btn {
+  background-color: #117373;
+  color: white;
+  border: none;
+  cursor: pointer; /* Hand som pekare */
+  border-radius: 5px;
+  width: 27px; /* Fast bredd för knapparna */
+  height: 27px; /* Fast höjd för knapparna */
+  display: flex; 
+  justify-content: center; /* Centrera texten horisontellt */
+  align-items: center; /* Centrera texten vertikalt */
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Animerad övergång vid hover */
+}
+
+/* Ändra bakgrundsfärg när användaren hovrar över knapparna */
+.quantity-btn:hover {
+  background-color: #4B9796; /* Annan kulör vid hover */
+}
+
+/* Stil för inmatningsfältet för kvantitet */
+.quantity-input {
+  width: 40px; /* Fast bredd för inmatningsfältet */
+  text-align: center; /* Centrera texten i inmatningsfältet */
+  border: 1px solid #ccc; /* kantlinje */
+  border-radius: 4px;
+  padding: 5px; 
+  font-size: 1rem; 
+  box-shadow: inset 0 2px 2px #4B9796; /* Inre skugga */
+}
+
+/* Ta bort standardpilknapparna i inmatningsfältet (för webbläsare som visar det) */
+.quantity-input[type=number]::-webkit-outer-spin-button,
+.quantity-input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Ta bort webbläsarens standardstil */
+  margin: 0;
+}
+
+/* Responsiv design för skärmar mindre än 600px */
+@media (max-width: 600px) {
+  .quantity-controls {
+    gap: 5px; /* Behåll litet mellanrum mellan knappar och inmatningsfält */
+  }
+
+  .quantity-btn {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+  }
+
+  .quantity-input {
+    width: 40px; /* Behåll en fast bredd */
+    font-size: 0.875rem;
+  }
+}

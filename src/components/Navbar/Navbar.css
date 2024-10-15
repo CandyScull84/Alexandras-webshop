@@ -1,0 +1,104 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex; /* Flexbox för att ordna innehållet horisontellt */
+  justify-content: space-between; 
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  position: sticky; /* Gör att navbaren stannar under header vid scrollning */
+  width: 100vw; /* Tar upp hela skärmens bredd */
+  margin: 0;
+  top: 13vh;  /* Placera navbaren under headern */
+  z-index: 1000;
+  box-shadow: 0 4px 8px #4B9796; /*Lägga till skugga */
+  box-sizing: border-box;
+}
+
+/* Stil för länkar i navbaren */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stil för individuella länkar */
+.navbar-link {
+  color: #117373;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 1.125rem;
+}
+
+/* Stil för varukorgsikonen */
+.navbar-cart {
+  display: flex;
+  align-items: center;
+  color: #117373;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  margin-right: 50px; 
+  position: relative; /* För att placera item count */
+}
+
+/* Stil för indikatorn som visar antalet objekt i varukorgen */
+.cart-item-count {
+  background-color: #117373;
+  color: white;
+  border-radius: 50%; /* Gör indikatorn cirkelformad */
+  padding: 3px 3px; /* Justera padding för bättre utseende */
+  position: absolute; /* Placerar item count i hörnet */
+  top: -10px; /* Flytta upp indikatorn ovanför ikonen */
+  right: -15px; /* Flytta indikatorn till höger om ikonen */
+  font-size: 0.75rem; /*12px*/
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stil för hamburgerikonen som visas på mindre skärmar */
+.sidebar-toggle {
+  background: none; /* Ingen bakgrund */
+  border: none; /* Ingen kant */
+  font-size: 1.25rem; 
+  color: #117373; 
+  cursor: pointer; /* Hand som pekare */
+  display: none;
+}
+
+/* Stilar för skärmar mindre än 768px */
+@media (max-width: 768px) {
+  /* Visa hamburgerikonen för mindre skärmar */
+  .sidebar-toggle {
+    display: block;
+   }
+
+  /* Anpassa varukorgsikonen för mindre skärmar */
+  .navbar-cart {
+    font-size: 1.25rem;
+    margin-right: 10px; 
+    display: block;
+  } 
+}
+
+/* Stilar för skärmar mindre än 480px */
+@media (max-width: 480px) {
+  /* Justera länkarna för ännu mindre skärmar */
+  .navbar-link {
+    font-size: 1rem;
+  }
+  /* Justera varukorgsikonen för mindre skärmar */
+  .navbar-cart {
+    font-size: 1.125rem;
+  }
+  /* Minska storlek på indikatorn för antal varor i varukorgen */
+  .cart-item-count {
+    font-size: 0.625rem; /*10px*/
+    min-width: 18px;
+    height: 18px;
+  }
+}

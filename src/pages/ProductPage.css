@@ -1,0 +1,127 @@
+/* ProductPage.css */
+
+/* Stil för produktsidan */
+.productPage {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Grid-layout för produkterna */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));/* Automatisk påfyllning av kolumner för responsiv layout */
+  gap: 20px;
+  padding: 0;
+}
+
+/* Styla varje produktkort */
+.product-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px #4B9796;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease; /* Gör en smidig hover-effekt */
+}
+
+/* Hover-effekt på produktkort */
+.product-card:hover {
+  transform: translateY(-10px); /* Gör att kortet "lyfter" när man hovrar över det */
+}
+
+/* Länk till produkten */
+.product-link {
+  display: block;
+  text-decoration: none;
+  color: inherit; /* Behåller färginställningarna för att länken inte ska ändra färg */
+  width: 100%;
+  height: 100%;
+}
+
+/* Stil för produktbilder */
+.product-image {
+  width: 100%;
+  max-height: 200px; /* Justera max-höjd */
+  object-fit: cover; /* Alla bilder fyller utrymmet utan att förvrängas */
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Stil för beskrivning och pris */
+.product-card p {
+  margin: 5px 0;
+  font-size: 1rem; 
+  color: slategray;
+}
+
+/* Titel på produkterna */
+h3 {
+  font-size: 1.25rem; /* 20px */
+  margin-bottom: 10px;
+}
+
+/* Stil på Pris text */
+.price-text {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none; /* Ingen understrykning för pristexten */
+}
+
+/* Responsiv design för små skärmar */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Mindre kort på mindre skärmar */
+    justify-items: center;
+  }
+
+  .product-card {
+    padding: 10px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+
+  .product-image {
+    margin-bottom: 10px;
+  } 
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+  } 
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* En produkt per rad */
+    justify-items: center;
+  }
+
+  .product-card {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 0.75rem;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 150px; /* Begränsa bildens bredd */
+    height: auto;
+    max-height: 150px; /* Se till att maxhöjd inte överskrids */
+    margin-bottom: 10px; /* Ger lite utrymme under bilden */
+  }
+}

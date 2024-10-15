@@ -1,0 +1,111 @@
+/*Header.css*/
+
+/* Container för header */
+.header-container {
+  position: sticky; /* Gör headern fast vid scrollning */
+  top: 0; /* Positionerar headern högst upp */
+  width: 100vw;
+  height: 13vh;
+  min-height: 100px;
+  max-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* Samma bakgrundsfärg som navbaren */
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Inkludera padding och border i total storlek */
+}
+
+/* Innehåll i header */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Utrymme mellan logotyp och text */
+  width: 100%;
+  max-width: 100%;
+  padding: 0 40px; /* Lägger till lite padding så att det inte sitter precis vid kanterna */
+  margin: 0 auto;
+}
+
+/* Logotypens länk */
+.header-logo-link {
+  flex: 0 0 auto; /* Förhindrar att logotypen växer */
+  padding: 0;
+  margin: 0;
+}
+
+/* Stil för logotypen */
+.header-logo {
+  max-height: 90px;
+  height: auto;
+  object-fit: contain; /* Håller logotypens proportioner */
+}
+
+/* Textsektion i headern */
+.header-text {
+  flex: 1; /* Resterande utrymme för texten */
+  text-align: center; /* centrerar texten*/
+  padding: 0;
+  margin: 0;
+}
+
+.header-text h2 {
+  font-size: 1.5rem; /* Justera textstorlek efter behov */
+  color: #86BAB9; /* Anpassa textfärgen efter din design */
+  margin: 0;
+  font-family: 'satisfy', 'italic';
+  font-weight: 100;
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .header-container {
+    max-width: 100%;
+    object-fit: fill; /* Anpassa innehållet till container */
+  } 
+  
+  .header-content {
+    flex-direction: column; /* Kolumnlayout på mindre skärmar */
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-logo {
+    height: 60px; /* Logotypen tar fortfarande hela höjden */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-text h2 {
+    font-size: 1.25rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Responsiv design för ännu mindre skärmar */
+@media (max-width: 480px) {
+  .header-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  } 
+
+  .header-logo {
+    height: 50px; /*Anpassar till mindre skärmar*/ 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-text h2 {
+    font-size: 1.125rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+} 

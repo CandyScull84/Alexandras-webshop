@@ -1,0 +1,97 @@
+/* HomePage.css */
+
+/* Huvudcontainer */
+.homepage-container {
+  display: flex;
+  flex-direction: column; /* Placerar innehållet i en kolumn */
+  justify-content: center; /* Centrerar innehållet vertikalt */
+  align-items: center;
+  min-height: 80vh; /* Sätter höjden till 80% av viewport-höjden */
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+  background-image: url('https://heritagefinefoods.co.uk/wp-content/uploads/2020/10/AdobeStock_183498795-baking-585x550.jpg');
+  background-size: cover; /* Täcker hela området med bakgrundsbild */
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); /* Mörk skugga för bakgrundsbilden */
+  overflow: hidden; /* Förhindrar att sidan blir skrollbar */
+}
+
+/* Sektion för hero */
+.hero-section {
+  text-align: center;
+  padding: 20px;
+  background: rgba(250, 250, 250, 0.7); /* Lätt bakgrund för bättre kontrast */
+  box-shadow: none;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+/* Textstyling */
+.hero-section p {
+  font-size: 1rem;
+  color: #117373;
+  margin-bottom: 30px;
+}
+
+/* Logo styling */
+.logo-img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Centrera logotypen och ge den lite utrymme under */
+}
+
+/* Knapp för att utforska produkter */
+.explore-btn {
+  background-color: #117373;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer; /* Pekaren ändras till hand */
+  transition: background-color 0.3s ease; /* Mjuk övergång för bakgrundsfärgen */
+}
+
+.explore-btn:hover {
+  background-color: #4B9796; /* Ändrar kulör när muspekaren är över knappen */
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .hero-section {
+    max-width: 90%; /* Minska bredden för mindre skärmar */
+  }
+
+  .hero-section p {
+    font-size: 0.875rem; 
+  }
+
+  .explore-btn {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .hero-section p {
+    font-size: 0.75rem; 
+  }
+
+  .explore-btn {
+    padding: 10px 15px;
+    font-size: 0.75rem;
+  }
+
+  .logo-img {
+    width: 150px; /* Minska storleken på logotypen på små skärmar */
+  }
+}

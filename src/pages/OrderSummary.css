@@ -1,0 +1,161 @@
+/* OrderSummary.css */
+
+.ordersummary-content {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: #C0DEDC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Container för att hålla produkter och personlig information */
+.order-summary-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Avstånd mellan produkterna och den personliga informationen */
+}
+
+/* Stil för produktlistan */
+.product-list {
+  flex: 1; /* Gör att produktlistan fyller utrymmet */
+}
+
+/* Stil för varje produkt */
+.product-item {
+  display: grid; /* Grid-layout för att arrangera produktinformationen */
+  grid-template-columns: 1fr 60px 60px; /* Kolumner för titel, antal och pris */
+  gap: 30px; /* Utrymme mellan kolumnerna */
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Grå kantlinje */
+  align-items: center; /* Se till att alla element linjerar vertikalt */
+}
+
+.product-totalprice {
+  margin-top: 20px; /* Ger lite utrymme ovanför totalpriset */
+  text-align: right; /* Justera texten till höger */
+}
+
+.product-totalprice h4 {
+  color: slategray; /* Ändra färg om du vill */
+  margin: 0 20px; /* Tar bort standardmarginal */
+}
+
+/* Stil för personlig information */
+.personal-info {
+  flex: 0 0 40%; /* Ställ in en specifik bredd för personalinfo-sektionen */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.personal-info label {
+  display: block;
+  margin-bottom: 10px; /* Utrymme mellan etiketterna */
+}
+
+.personal-info input {
+  width: 90%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.personal-info button {
+  margin-top: 10px;
+  background-color: #117373; /* Blå knappfärg */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.personal-info button:hover {
+  background-color:  #4B9796; /* Mörkare blå vid hover */
+}
+
+/*Kundvagn tömd */
+.empty-cart a {
+  text-decoration: none; /* Tar bort understreck */
+  color: #117373; /* Valfri textfärg */
+  font-weight: bold; /* Gör texten fet om du vill */
+  gap: 20px;
+}
+
+.empty-cart a:hover {
+  color: #4B9796; /* Valfri hover-färg */
+}
+
+/* Toast style */
+.Toastify__toast--success {
+  background-color: #117373; 
+}
+
+.Toastify__toast--error {
+  background-color: #dc3545; /* Röd färg för error */
+}
+
+.Toastify__toast {
+  border-radius: 10px; /* Rundade hörn */
+  padding: 20px;
+  font-size: 1rem;
+  color: white; /* Vit textfärg */
+}
+
+/*Text style */
+h3{
+  font-size: 1.125rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+p {
+  font-size: 1rem;
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .order-summary-container {
+    flex-direction: column; /* Ändra layouten till en kolumn */
+  }
+
+  .product-item {
+    grid-template-columns: 1fr 50px 50px; /* Lite mindre kolumner för kvantitet och pris */
+    gap: 15px;
+  }
+
+  .personal-info {
+    width: 100%; /* Gör personalinfo fullbredd */
+    padding: 15px; /* Lite mindre padding */
+  }
+
+  .product-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-summary-container {
+    flex-direction: column; /* Se till att layouten är i kolumn */
+  }
+
+  .product-item {
+    grid-template-columns: 1fr; /* En rad per produkt */
+    text-align: center; /* Centrera texten i varje produkt */
+  }
+
+  .personal-info {
+    width: 100%; /* Full bredd */
+    padding: 10px; 
+  }
+
+  .product-list {
+    width: 100%;
+  }
+}

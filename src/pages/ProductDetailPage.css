@@ -1,0 +1,145 @@
+/* ProductDetailPage.css */
+
+/* container för detaljer om produkter*/
+.product-detail-page {
+  max-width: 800px;  /* Minska maxbredden för att inte ta för mycket yta */
+  margin: 40px auto; /* Centrerad layout */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px #4B9796;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Grid layout */
+  gap: 20px;
+}
+
+/* style för titel och paragraf */
+.product-detail-page h2 {
+  font-size: 1.5rem; /* Samma storlek som rubriker i ProductPage */
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif; /* Använd samma font */
+  color: #117373; /* Samma färg som på knappar */
+  text-align: left;
+}
+.product-detail-page p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: slategray; /* Samma grå ton för text */
+}
+
+/* style för bilder */
+.product-detail-page img {
+  width: 100%;  /* Bilden tar hela bredden av sin container */
+  max-width: 400px; /* Maximal bredd på bilden */
+  height: auto;  /* Bildens höjd justeras automatiskt */
+  border-radius: 8px;
+  margin-bottom: 20px; /* Utrymme mellan bilden och texten */
+}
+/* Style för beskrivning av produkter, pris m.m */
+.product-detail-page .description {
+  font-size: 1rem;
+  color: slategray;
+  margin-bottom: 20px;
+}
+
+.product-detail-page .price {
+  font-size: 1.25rem; /* Matchar storleken från ProductPage */
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333; /* Samma färg som pristexten */
+  margin-bottom: 20px;
+}
+
+/* Style av kolumner */
+.product-detail-page .left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail-page .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Add to Cart-knappen */
+.add-to-cart-btn {
+  background-color: #117373;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #4B9796; /* Mörkare ton på hover */
+}
+
+/* Container för kvantitetskontroll och Add to Cart-knapp */
+.quantity-control-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Mellanrum mellan kvantitetskontrollen och knappen */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%; /* Gör kontroll och knapp bredare */
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .product-detail-page {
+    grid-template-columns: 1fr; /* En kolumn på mindre skärmar */
+    gap: 15px;
+  }
+
+  .product-detail-page img {
+    max-width: 100%; /* Bilden tar upp hela bredden på små skärmar */
+  }
+
+  .product-detail-page h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .add-to-cart-btn {
+    width: 100%; /* Knapparna tar upp hela bredden på små skärmar */
+  }
+
+  .product-detail-page .left-column,
+  .product-detail-page .right-column {
+    align-items: center;
+    text-align: center;
+  }
+  .quantity-control-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-page {
+    padding: 10px;
+    grid-template-columns: 1fr; /* En kolumn */
+  }
+
+  .product-detail-page h2 {
+    font-size: 1.25rem; /* Mindre storlek för rubriken */
+  }
+
+  .product-detail-page img {
+    max-width: 100%;
+    max-height: 150px; /* Begränsad bildhöjd på små skärmar */
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+  }
+
+  .quantity-control-container {
+    flex-direction: column;
+  }
+}

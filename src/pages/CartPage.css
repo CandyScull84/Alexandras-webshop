@@ -1,0 +1,170 @@
+/* CartPage.css */
+
+/* Container för hela varukorgens innehåll */
+.cart-content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  width: 90%;
+}
+
+/* Lista över alla objekt i varukorgen */
+.cart-list {
+  display: flex;
+  flex-direction: column; /*Lista produkterna vertikalt */
+  gap: 10px;
+} 
+
+/* Header för kolumner */
+.cart-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Layout med 3 kolumner */
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 5px 0;
+  border-bottom: 2px solid #ddd; /*Separationslinje under titlarna*/
+  margin-bottom: 10px;
+  align-items: center;
+  color: slategray;
+}
+
+/* Enskilda varukorgsobjekt */
+.cart-item {
+  background-color: #C0DEDC;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  display: grid; /* Använd CSS Grid för bättre layout */
+  grid-template-columns: 2fr 1fr 1fr; /* Skapa 3 kolumner för layout */
+  gap: 5px;
+  position: relative; /* För att möjliggöra absolut positionering inom objektet */
+}
+
+/* Information om varukorgsobjekt (bild, titel) */
+.cart-item-info {
+  display: flex;
+  flex-direction: column; /* Bilden och titeln i en kolumn */
+  align-items: flex-start; /* Centrera texten och bilden horisontellt */
+}
+
+/* Stil för produktbilder */
+.cart-item-image {
+  width: 80px; /* Justera bredden efter behov */
+  height: auto; /* Behåll bildens proportioner */
+  margin-bottom: 5px; /*Avstånd till texten */
+}
+
+/* Justera kolumner för pris, kvantitet och total */
+.cart-item-price,
+.cart-item-total, 
+.cart-item-quantity {
+  text-align: left; /* Centrera texten i varje kolumn */
+  padding: 5px 0;
+}
+
+/* Kvantitetskontroll */
+.cart-item-quantity {
+  display: flex;
+  justify-content: flex-start; /* Centrera kvantitetskontrollen i kolumnen */
+}
+
+/* Div för ta bort-knappen */
+.remove-item {
+  position: absolute; /* Gör knappen absolut positionerad */
+  bottom: 10px; /* Placera den 10px från botten */
+  right: 10px; /* Placera den 10px från höger */
+}
+
+/* Stil för ta bort-knappen */
+.remove-btn {
+  background-color: slategray; 
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: black; 
+}
+
+/* Stil för checkout-knappen */
+.checkout-btn {
+  background-color: #117373;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #4B9796; /* Ljusare bakgrund vid hover */
+}
+
+/* Textstilar för rubriker */
+h3, h4, h5 {
+  font-family: 'Roboto', sans-serif ;
+  color: slategray;
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 1fr; /* Endast en kolumn på små skärmar */
+    text-align: center; /* Centrera texten */
+  }
+
+  .cart-item-info {
+    align-items: center; /* Centrera text och bild */
+  }
+
+  .cart-header {
+    display: none; /* Dölj header för kolumner på små skärmar */
+  }
+
+  .cart-item-quantity {
+    justify-content: center; /* Centrera kvantitetskontrollen på små skärmar */
+  }
+
+  .remove-item {
+    position: static; /* Placera knappen naturligt */
+    margin-top: 10px; 
+    text-align: center; /* Centrera knappen */
+  }
+
+  .cart-item-price,
+  .cart-item-total,
+  .cart-item-quantity {
+    text-align: center; /* Centrera pris och kvantitet för varje produkt */
+  }
+
+  .checkout-btn {
+    width: 100%; /* Gör checkout-knappen fullbred */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .cart-content {
+    width: 80%; /* Minska bredden något för små skärmar */
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr; /* Endast en kolumn per produkt */
+  }
+
+  .cart-item-info {
+    align-items: center; /* Centrera bild och text */
+  }
+
+  .remove-item {
+    text-align: center;
+  }
+
+  .checkout-btn {
+    width: 100%; /* Fullbredd på checkout-knappen */
+  }
+}

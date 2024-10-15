@@ -1,0 +1,25 @@
+{
+  "short_name": "BD",
+  "name": "alexandras-webshop Baking dreams",
+  "icons": [
+    {
+      "src": "Header_logoBD.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "logo_BDZero.png",
+      "type": "image/png",
+      "sizes": "192x192 512x512"
+    },
+    {
+      "src": "logo_BD.png",
+      "type": "image/png",
+      "sizes": "192x192 "
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4B9796",
+  "background_color": "#ffffff"
+}

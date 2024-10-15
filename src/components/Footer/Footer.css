@@ -1,0 +1,72 @@
+/* Footer.css */
+
+/* Container för footern */
+.footer-container {
+  background-color: #117373;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  position: relative;
+  height: 8vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between; /*Sprider ut innehållet horisontellt*/
+  align-items: center; /* Vertikalt centrerar innehållet */
+  flex-wrap: wrap; /* Tillåter ombrytning på mindre skärmar */
+}
+
+/* Behållare för länkar */
+.footer-links {
+  margin-bottom: 0;
+  justify-content: flex-start; /* Länkarna ligger till vänster */
+  display: flex;
+  flex-direction: column; /* Länkar i kolumn (vertikal rad) */
+  margin-left: 20px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none; /* Ingen understrykning på länkar */
+  text-align: left;
+  font-size: 0.875rem;
+  margin-bottom: 5px;
+  margin: 4px;
+}
+
+.footer-link i {
+  margin-right: 8px; /* Lägger till mellanrum mellan ikon och text */
+} 
+
+.footer-link:hover {
+  font-weight: bold;
+}
+
+/* Stilar för upphovsrättstexten */
+.footer-text {
+  flex: 1; /* Låt texten ta utrymme i mitten */
+  font-size: 0.875rem;
+  text-align: center; /* Centrerar texten horisontellt */
+  margin: 0; /* Tar bort marginalen så texten är centrerad på linjen */
+  color: white;
+}
+
+/* Responsiva stilar för mindre skärmar */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Vertikal layout på små skärmar */
+    align-items: center; /* Centrerar innehållet på mindre skärmar */
+    justify-content: center;
+  }
+
+  .footer-links {
+    margin-left: 0; /* Centrera länkarna */
+    align-items: center; /* Centrera länkarna på små skärmar */
+    display: none; /* Gömmer länkarna på små skärmar */
+  }
+
+  .footer-text {
+    margin-top: 10px; /* Lägger till avstånd ovanför texten */
+  }
+}
